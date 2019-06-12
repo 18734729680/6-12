@@ -8,16 +8,12 @@
 </head>
 <body>
     <script>
-        function forEach(num){
-            for(let i=0;i<num.length;i++){
-                return num[i]
+        Arr=['a','2','4','5g','h']
+        Array.prototype.forEach=function(arrry){
+            for(let i=0;i<this.length;i++){
+                arrry(this[i])
             }
         }
-        const arr=['a','2','4','5g','h']
-        console.log(forEach(arr))
-
-        
-        Arr=['a','2','4','5g','h']
         Arr.forEach((item)=>{
             console.log(item)//a,2,4,5g,h
         })
